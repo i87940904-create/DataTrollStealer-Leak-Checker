@@ -159,7 +159,8 @@ class LeakChecker:
             
             # حفظ معلومات Rate Limit
             if 'X-RateLimit-Remaining' in response.headers:
-                self.rate_limit_remaining = response.headers['X-RateLimit-Remaining']\n            if 'X-RateLimit-Reset' in response.headers:
+                self.rate_limit_remaining = response.headers['X-RateLimit-Remaining']
+            if 'X-RateLimit-Reset' in response.headers:
                 self.rate_limit_reset = response.headers['X-RateLimit-Reset']
             
             if response.status_code == 200:
